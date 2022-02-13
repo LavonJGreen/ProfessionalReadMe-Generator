@@ -56,3 +56,5 @@ const questions = () => {
         }
     ])
 };
+
+questions().then(answers => console.log(answers))
