@@ -1,10 +1,13 @@
+//Global constant 
 const fs = require('fs')
 
 const inquirer = require('inquirer')
 
-const createMarkDown = require()
+const createMarkdown = require('./utils/createMarkdown')
 
-// creating questions to be askd 
+const util = require('util')
+
+// creating questions that will displayed and prompt the user to answer
 
 const questions = () => {
     return inquirer.prompt([
@@ -56,5 +59,3 @@ const questions = () => {
         }
     ])
 };
-
-questions().then(answers => console.log(answers))

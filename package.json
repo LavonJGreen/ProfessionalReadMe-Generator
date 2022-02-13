@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/LavonJGreen/ProfessionalReadMe-Generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "util": "^0.12.4"
   }
 }
