@@ -1,9 +1,9 @@
 //Global constant 
-const fs = require('fs')
+const fs = require("fs")
 
-const inquirer = require('inquirer')
+const inquirer = require("inquirer")
 
-const createMarkdown = require('./utils/createMarkdown')
+const createMarkdown = require("./utils/createMarkdown")
 
 const util = require('util')
 
@@ -13,7 +13,7 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'title',
+            name: 'Title',
             message: 'Enter project title:',
         },
         {
@@ -45,10 +45,11 @@ const questions = () => {
             type: 'list',
             name: 'License',
             message: 'Choose license used:',
+            choices: ['MIT', 'ISC', 'None'],
         },
         {
             type: 'input',
-            name: 'Email',
+            name: 'email',
             message: 'Enter contact email:',
             
         },
@@ -59,3 +60,17 @@ const questions = () => {
         }
     ])
 };
+
+
+
+const generateReadMe = util.promisify(fs.writeFile);
+
+
+const init = () => {
+    questions ()
+    .then((answers)=>generateReadMe("README.md", createMarkdown(answers)))
+    .catch((err) => console.log(err));
+    };
+
+
+init();

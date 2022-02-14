@@ -1,9 +1,10 @@
-function createMarkdown(data) {
+function createMarkdown(answers) {
     return `
-    # ${data.title}
+    ## Title
+     ${answers.Title}
               
     ## Description
-    ${data.Description}
+    ${answers.Description}
               
               
     ## Table of Contents
@@ -16,25 +17,25 @@ function createMarkdown(data) {
                   
               
     ## Installation  
-    ${data.Installation}  
+    ${answers.Installation}  
                 
               
     ## Usage  
-    ${data.Usage}   
+    ${answers.Usage}   
                 
               
     ## Contributors  
-    ${data.Contributing}  
+    ${answers.Contributing}  
                 
               
     ## Tests   
-    ${data.Tests}  
+    ${answers.Tests}  
                 
               
     ## Questions  
-    ${(data.github) ? `Please feel free to reach me at [${data.github}](https://github.com/${data.github}) for any clarifying questions or ways to collaborate` : ""}    
+    ${(answers.github) ? `Please feel free to reach me at [${answers.github}](https://github.com/${answers.github}) for any clarifying questions or ways to collaborate` : ""}    
               
-    ${(data.email) ? `Contact me via email at [${data.email}](${data.email}) if you need further assiatnce` : ""}   
+    ${(answers.email) ? `Contact me via email at [${answers.email}](${answers.email}) if you need further assiatnce` : ""}   
     `;
     }
     
