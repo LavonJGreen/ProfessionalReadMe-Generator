@@ -13,37 +13,37 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'Title',
+            name: 'title',
             message: 'Enter project title:',
         },
         {
             type: 'input',
-            name: 'Description',
+            name: 'description',
             message: 'Provide a detailed discription of your project:',
         },
         {
             type: 'input',
-            name: 'Installation',
+            name: 'installation',
             message: 'Provide detailed instructions on how to install the project:',
         },
         {
             type: 'input',
-            name: 'Usage',
+            name: 'usage',
             message: 'Enter clear instructions on how the project is used:',
         },
         {
             type: 'input',
-            name: 'Contributing',
+            name: 'contributing',
             message: 'Provide guidelines for developers on how to contribute to the project:',
         },
         {
             type: 'input',
-            name: 'Tests',
+            name: 'tests',
             message: 'Provide tests for your application and examples on how to run them:',
         },
         {
             type: 'list',
-            name: 'License',
+            name: 'license',
             message: 'Choose license used:',
             choices: ['MIT', 'ISC', 'None'],
         },

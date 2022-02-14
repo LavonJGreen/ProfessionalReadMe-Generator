@@ -1,37 +1,31 @@
 function createMarkdown(answers) {
     return `
-    ## Title
-     ${answers.Title}
+    # ${answers.title}
               
     ## Description
-    ${answers.Description}
+    ${answers.description}
               
               
     ## Table of Contents
-    -  [Installation](#Installation)  
-    -  [Usage](#Usage)  
-    -  [License](#License)  
-    -  [Contributors](#Contributors)  
-    -  [Tests](#Tests)  
-    -  [Questions](#Questions)  
-                  
-              
+    -  [Installation](#installation)  
+    -  [Usage](#usage)  
+    -  [License](#license)  
+    -  [Contributors](#contributors)  
+    -  [Tests](#tests)  
+    -  [Questions](#questions)  
+                            
     ## Installation  
-    ${answers.Installation}  
-                
-              
+    ${answers.installation}  
+                          
     ## Usage  
-    ${answers.Usage}   
-                
-              
+    ${answers.usage}   
+                          
     ## Contributors  
-    ${answers.Contributing}  
-                
-              
+    ${answers.contributing}  
+
     ## Tests   
-    ${answers.Tests}  
-                
-              
+    ${answers.tests}  
+                            
     ## Questions  
     ${(answers.github) ? `Please feel free to reach me at [${answers.github}](https://github.com/${answers.github}) for any clarifying questions or ways to collaborate` : ""}    
               
