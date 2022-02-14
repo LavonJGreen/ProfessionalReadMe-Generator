@@ -68,7 +68,7 @@ const generateReadMe = util.promisify(fs.writeFile);
 
 const create = () => {
     questions ()
-    .then((answers)=>generateReadMe("README.md", createMarkdown(answers)))
+    .then((answers)=>generateReadMe("./assets/README.md", createMarkdown(answers)))
     .catch((err) => console.log(err));
     };
 
