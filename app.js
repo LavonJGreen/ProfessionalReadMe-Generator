@@ -66,11 +66,11 @@ const questions = () => {
 const generateReadMe = util.promisify(fs.writeFile);
 
 
-const init = () => {
+const create = () => {
     questions ()
     .then((answers)=>generateReadMe("README.md", createMarkdown(answers)))
     .catch((err) => console.log(err));
     };
 
 
-init();
+create();
